@@ -2,14 +2,15 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        double basicSalary=105000;
-        double dearness_allowance =0.40*basicSalary;
-        double house_rent=0.20*basicSalary;
-        double grossSalary = dearness_allowance+ house_rent;
-        System.out.println("the Total Salary = " + basicSalary);
-        System.out.println(" house_rent = " + grossSalary);
-        System.out.println("dearnessAllowance = " + grossSalary);
-        System.out.println("the gross salary = " + grossSalary);
-
+        int totalDistance=2614;
+        int meters = totalDistance*1000;
+        int feet = totalDistance*3280;
+        int inches = totalDistance*39370;
+        int centimeters = totalDistance*100000;
+        System.out.println("Total distance" + totalDistance);
+        System.out.println("distance in meter is " + meters);
+        System.out.println("distance in feet is " + feet);
+        System.out.println("distance in inches is " + inches);
+        System.out.println("distance in centimeters is " + centimeters);
     }
 }
