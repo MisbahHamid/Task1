@@ -4,25 +4,24 @@ import java.util.Scanner;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        int number = 12345;
+        int totalPopulation = 80000;
+        double percentageMen = 52.0;
+        double percentageLiteracy = 48.0;
+        double percentageLiterateMen = 35.0;
 
-        int digit1 = number % 10;
-        number = number / 10;
+        int numberOfMen = (int) (totalPopulation * percentageMen / 100);
+        int numberOfWomen = totalPopulation - numberOfMen;
 
-        int digit2 = number % 10;
-        number = number / 10;
+        int numberOfLiteratePeople = (int) (totalPopulation * percentageLiteracy / 100);
+        int numberOfIlliteratePeople = totalPopulation - numberOfLiteratePeople;
 
-        int digit3 = number % 10;
-        number = number / 10;
+        int numberOfLiterateMen = (int) (totalPopulation * percentageLiterateMen / 100);
 
-        int digit4 = number % 10;
-        number = number / 10;
+        int numberOfIlliterateMen = numberOfMen - numberOfLiterateMen;
+        int numberOfIlliterateWomen = numberOfIlliteratePeople - numberOfIlliterateMen;
 
-        int digit5 = number % 10;
-
-        int sum = digit1 + digit2 + digit3 + digit4 + digit5;
-
-        System.out.println("The sum of the digits is: " + sum);
+        System.out.println("Number of illiterate men: " + numberOfIlliterateMen);
+        System.out.println("Number of illiterate women: " + numberOfIlliterateWomen);
     }
 }
 
