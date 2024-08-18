@@ -4,24 +4,27 @@ import java.util.Scanner;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        int totalPopulation = 80000;
-        double percentageMen = 52.0;
-        double percentageLiteracy = 48.0;
-        double percentageLiterateMen = 35.0;
+        Scanner scanner = new Scanner(System.in);
 
-        int numberOfMen = (int) (totalPopulation * percentageMen / 100);
-        int numberOfWomen = totalPopulation - numberOfMen;
+        System.out.print("Enter the amount to be withdrawn (in hundreds): ");
+        int amountInHundreds = scanner.nextInt();
 
-        int numberOfLiteratePeople = (int) (totalPopulation * percentageLiteracy / 100);
-        int numberOfIlliteratePeople = totalPopulation - numberOfLiteratePeople;
+        int amount = amountInHundreds * 100;
 
-        int numberOfLiterateMen = (int) (totalPopulation * percentageLiterateMen / 100);
+        int numHundredNotes = amount / 100;
+        amount = amount % 100;
 
-        int numberOfIlliterateMen = numberOfMen - numberOfLiterateMen;
-        int numberOfIlliterateWomen = numberOfIlliteratePeople - numberOfIlliterateMen;
+        int numFiftyNotes = amount / 50;
+        amount = amount % 50;
 
-        System.out.println("Number of illiterate men: " + numberOfIlliterateMen);
-        System.out.println("Number of illiterate women: " + numberOfIlliterateWomen);
+        int numTenNotes = amount / 10;
+        amount = amount % 10;
+
+        System.out.println("Number of 100-unit notes: " + numHundredNotes);
+        System.out.println("Number of 50-unit notes: " + numFiftyNotes);
+        System.out.println("Number of 10-unit notes: " + numTenNotes);
+
+        scanner.close();
     }
 }
 
