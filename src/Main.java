@@ -4,20 +4,25 @@ import java.util.Scanner;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        int number = 12345;
 
-        System.out.print("Enter the first positive number (base): ");
-        double base = scanner.nextDouble();
+        int digit1 = number % 10;
+        number = number / 10;
 
+        int digit2 = number % 10;
+        number = number / 10;
 
-        System.out.print("Enter the second positive number (exponent): ");
-        double exponent = scanner.nextDouble();
-        double result= Math.pow(base,exponent);
+        int digit3 = number % 10;
+        number = number / 10;
 
+        int digit4 = number % 10;
+        number = number / 10;
 
-        System.out.println(base + " raised to the power of " + exponent + " is: " + result);
+        int digit5 = number % 10;
 
-        scanner.close();
+        int sum = digit1 + digit2 + digit3 + digit4 + digit5;
+
+        System.out.println("The sum of the digits is: " + sum);
     }
 }
 
