@@ -2,15 +2,18 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        int totalDistance=2614;
-        int meters = totalDistance*1000;
-        int feet = totalDistance*3280;
-        int inches = totalDistance*39370;
-        int centimeters = totalDistance*100000;
-        System.out.println("Total distance" + totalDistance);
-        System.out.println("distance in meter is " + meters);
-        System.out.println("distance in feet is " + feet);
-        System.out.println("distance in inches is " + inches);
-        System.out.println("distance in centimeters is " + centimeters);
+        int TotalMarks=100;
+        int subject1= 80;
+        int subject2=90;
+        int subject3=75;
+        int subject4=60;
+        int subject5=100;
+        int total = subject1+subject2+subject3+subject3+subject4+subject5;
+        int aggregate=0;
+        aggregate+=total;
+        int percentage =total*100/100;
+        System.out.println("the total marks are" + TotalMarks);
+        System.out.println("Aggrigate is " + aggregate);
+        System.out.println("Percentage is " + percentage);
     }
 }
